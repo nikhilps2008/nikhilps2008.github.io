@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhil's Portfolio</title>
+    <title>About Me - Nikhil's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -26,8 +24,15 @@
         </header>
         
         <div class="main-content">
-            <h2 id="welcome-text">Welcome to Nikhil's Portfolio</h2>
-            <p id="description">A data analyst with a zeal for digging deep into numbers to unearth<br> concealed patterns and trends, driven to transform intricate<br> data into captivating stories that inform and inspire.</p>
+            <h2 id="welcome-text">About Me</h2>
+            <div id="description" class="about-content">
+                <p>
+                    I am a passionate data analyst driven by a curiosity to uncover hidden insights within data. With a strong foundation in data analytics and proficiency in SQL, Power BI, Tableau, and Excel, I specialize in transforming complex data into compelling visual stories that drive informed decision-making.<br>
+                </p>
+                <p>
+                    My background in CNC programming and project engineering lends a unique perspective to my analytical approach, combining technical expertise with a keen eye for detail. I excel in creating interactive dashboards and reports that communicate insights effectively.
+                </p>
+            </div>
         </div>
         
         <footer class="footer">
@@ -39,22 +44,7 @@
         </footer>
     </div>
 
-    <script>
-        // Animation for "Welcome to Nikhil's Portfolio" and description
-        anime.timeline({
-            targets: '#welcome-text',
-            translateY: [-50, 0], // Move up and then back to original position
-            opacity: [0, 1], // Fade in
-            easing: 'easeOutExpo',
-            duration: 4000,
-            delay: anime.stagger(100) // Stagger each letter by 100ms
-        }).add({
-            targets: '#description',
-            translateX: [-100, 0], // Slide in from left
-            opacity: [0, 1], // Fade in
-            easing: 'easeOutExpo',
-            duration: 4000,
-        });
-    </script>
+    <!-- Optional: Include any JavaScript specific to the About page -->
+
 </body>
 </html>

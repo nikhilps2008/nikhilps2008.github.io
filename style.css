@@ -1,0 +1,130 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #4c604c; /* Dark green text color */
+}
+
+body {
+    background-color: #ffffff; /* White background */
+    line-height: 1.7;
+    height: 100%; /* Full height of the viewport */
+}
+
+.container {
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Minimum height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items horizontally */
+    justify-content: space-between; /* Space evenly between header, content, and footer */
+    padding-bottom: 60px; /* Space for footer */
+}
+
+.header {
+    background-color: #8aa18a; /* Light green */
+    color: #ffffff; /* White text */
+    padding: 15px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+}
+
+.header-title {
+    display: block; /* Display as block */
+}
+
+.header-title h1 {
+    font-size: 2.3rem; /* Font size for Nikhil's Portfolio */
+    margin-bottom: 0.3rem; /* Small margin bottom */
+    color: #ffffff; /* White text */
+}
+
+.navbar {
+    padding: 10px 0; /* Vertical padding */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center align navigation links */
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1; /* Fill remaining vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    margin-top: 0; /* Remove margin to start content immediately after header */
+}
+
+.main-content h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: #8aa18a; /* Light green footer */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1px 0; /* Increased padding to make space for boxes */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to the left */
+}
+
+.footer p {
+    margin: 0;
+    color: #ffffff; /* Ensure text color is white */
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Nikhil's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Flexbox layout for logo-grid */
+        .logo-grid {
+            display: flex;
+            justify-content: center; /* Center align items horizontally */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+        }
+
+        .logo-box {
+            width: 200px; /* Adjust width as needed */
+            margin: 10px; /* Add margin for spacing */
+            text-align: center; /* Center align text */
+        }
+
+        .logo-box img {
+            width: 100px; /* Adjust image size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .logo-box p {
+            font-size: 1rem; /* Adjust font size */
+            margin-top: 5px; /* Add space between image and text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-title">
+                <h1>Nikhil's<br>Portfolio</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main-content">
+            <h2 id="welcome-text" style="color: #4c604c; font-size: 2.5rem; text-align: center; margin-bottom: 20px;">Projects</h2>
+            <div class="logo-grid">
+                <div class="logo-box">
+                    <a href="excel.html">
+                        <img src="Images/Excel.png" alt="Excel Logo">
+                        <p>Projects using Microsoft Excel</p>
+                    </a>
+                </div>
+                <div class="logo-box">
+                    <a href="powerbi.html">
+                        <img src="Images/PowerBI.png" alt="Power BI Logo">
+                        <p>Projects using Microsoft Power BI</p>
+                    </a>
+                </div>
+                <div class="logo-box">
+                    <a href="analytics.html">
+                        <img src="Images/Data Analytics.png" alt="Data Analytics Logo">
+                        <p>Projects using MySQL and Tableau</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://github.com/nikhilps2008"><img src="Images/GitHub.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/nikhil-s-6426474a/"><img src="Images/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+            <p>&copy; 2024 Nikhil's Portfolio. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

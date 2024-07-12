@@ -58,18 +58,19 @@
     .section-title {
       text-align: center;
       margin-bottom: 60px;
+      color: #fff; /* Ensure text color is white */
     }
 
     .section-title h2 {
       font-size: 2.5rem;
       font-weight: 600;
-      color: #fff;
+      color: #fff; /* Ensure text color is white */
     }
 
     .section-title p {
       margin-top: 20px;
       font-size: 1.2rem;
-      color: #fff;
+      color: #fff; /* Ensure text color is white */
     }
 
     .contact-info {
@@ -145,15 +146,15 @@
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
- <nav id="navmenu" class="navmenu">
-  <ul>
-    <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-    <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-    <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
-    <li><a href="certifications.html"><i class="bi bi-images navicon"></i><span>Certifications</span></a></li>
-    <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-  </ul>
-</nav>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
+        <li><a href="certifications.html"><i class="bi bi-images navicon"></i><span>Certifications</span></a></li>
+        <li><a href="contact.html" class="active"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
 
   </header>
   <!-- End Header -->
@@ -163,7 +164,7 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
 
-      <div class="container section-title>
+      <div class="container section-title" data-aos="fade-up">
         <h2>Contact Me</h2>
         <p>I'm eager to hear from you! Feel free to drop me a message.</p>
       </div><!-- End Contact Section Title -->
@@ -201,29 +202,12 @@
       <div class="row">
         <div class="col-lg-12">
           <p>&copy; 2024 Nikhil Sreenivasan. All Rights Reserved</p>
-          </div>
         </div>
       </div>
     </div>
   </footer>
   <!-- End Footer -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.querySelector('.header-toggle');
-    const navMenu = document.querySelector('.navmenu');
 
-    toggleButton.addEventListener('click', function () {
-      navMenu.classList.toggle('show');
-    });
-
-    // Optional: Close the menu if clicking outside of it
-    document.addEventListener('click', function (event) {
-      if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
-        navMenu.classList.remove('show');
-      }
-    });
-  });
-</script>
 </body>
 
 </html>

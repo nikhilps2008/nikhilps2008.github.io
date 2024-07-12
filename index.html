@@ -13,8 +13,6 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -26,13 +24,12 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="index-page">
 
   <!-- Header -->
-  <header id="header" class="header d-flex flex-column justify-content-center">
+  <header id="header" class="header">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -89,6 +86,17 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- JavaScript to toggle navmenu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const headerToggle = document.querySelector('.header-toggle');
+      const navMenu = document.querySelector('.navmenu');
+
+      headerToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 
 </html>

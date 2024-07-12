@@ -89,7 +89,6 @@ p {
 
 .navmenu ul li {
   margin: 0 15px;
-  position: relative;
 }
 
 .navmenu ul li a {
@@ -107,20 +106,6 @@ p {
 .navmenu ul li a:hover {
   color: #007bff;
   background-color: rgba(0, 123, 255, 0.1);
-}
-
-.navmenu ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  z-index: 999;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.navmenu ul li:hover > ul {
-  display: block;
 }
 
 .navicon {
@@ -339,6 +324,10 @@ p {
   color: #fff;
 }
 
+.contact .section-title p {
+  color: #fff;
+}
+
 .contact .info-item h3,
 .contact .info-item p {
   color: #fff;
@@ -375,63 +364,59 @@ p {
 }
 
 @media (max-width: 768px) {
-.navmenu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 999;
-  transition: transform 0.3s ease;
-  transform: translateY(-100%);
-}
-
-.navmenu ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-}
-
-.navmenu ul li {
-  position: relative;
-  margin: 0;
-}
-
-.navmenu ul li a {
-  display: block;
-  padding: 15px;
-  color: #333;
-  text-decoration: none;
-}
-
-.navmenu ul li:hover > ul {
-  display: block;
-}
-
-.navmenu ul ul {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #fff;
-  z-index: 999;
-}
-
-.navmenu.show {
-  transform: translateY(0%);
-}
+  .navmenu {
+    display: none;
+  }
 
   .header-toggle {
     display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-    z-index: 9999;
   }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .portfolio-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid layout */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional Customizations */
+
+/* Back to Projects Button */
+.back-to-projects {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #fff; /* White background */
+  color: #007bff; /* Blue font color */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-projects:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* White font color on hover */
 }

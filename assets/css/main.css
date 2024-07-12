@@ -89,6 +89,7 @@ p {
 
 .navmenu ul li {
   margin: 0 15px;
+  position: relative;
 }
 
 .navmenu ul li a {
@@ -106,6 +107,20 @@ p {
 .navmenu ul li a:hover {
   color: #007bff;
   background-color: rgba(0, 123, 255, 0.1);
+}
+
+.navmenu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.navmenu ul li:hover > ul {
+  display: block;
 }
 
 .navicon {
@@ -164,84 +179,248 @@ p {
   color: #007bff;
 }
 
-/* Additional Customizations */
+/* About Section */
+.about {
+  background-color: #03264d; /* Navy blue background */
+  color: #fff; /* White font color */
+  padding: 80px 0;
+}
 
-/* Back to Projects Button */
-.back-to-projects {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+.about-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1rem; /* Adjusted font size for paragraphs */
+  color: #fff; /* White paragraph color */
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 20px; /* Added padding-left for bullet points */
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+.skills-list li:before {
+  content: "•"; /* Bullet point */
+  color: #007bff; /* Blue bullet point color */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Portfolio Section */
+.portfolio {
   background-color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: #333;
+  padding: 80px 0;
+}
+
+.portfolio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted grid layout */
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-box img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  color: #fff;
+  opacity: 0;
   transition: 0.3s;
 }
 
-.back-to-projects:hover {
+.portfolio-info:hover {
+  opacity: 1;
+}
+
+.portfolio-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Services Section */
+.services {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.service-item {
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+.service-item .icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.service-item .icon svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.service-item .icon i {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 2;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Contact Section */
+.contact {
   background-color: #007bff;
   color: #fff;
+  padding: 80px 0;
 }
 
-/* Scroll Top Button */
-.scroll-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(0, 123, 255, 0.8);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contact .section-title h2 {
   color: #fff;
-  font-size: 1.5rem;
-  z-index: 1000;
-  transition: background-color 0.3s;
 }
 
-.scroll-top:hover {
+.contact .info-item h3,
+.contact .info-item p {
+  color: #fff;
+}
+
+.php-email-form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.php-email-form .form-control {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+}
+
+.php-email-form textarea.form-control {
+  height: 150px;
+}
+
+.php-email-form .btn {
   background-color: #0056b3;
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+  transition: 0.3s;
 }
 
-/* Media Queries */
+.php-email-form .btn:hover {
+  background-color: #004190;
+}
+
 @media (max-width: 768px) {
-  .navmenu ul {
-    display: none;
+  .navmenu {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 100px;
     left: 0;
     width: 100%;
     background-color: #fff;
     z-index: 999;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
   }
 
-  .navmenu ul.active {
-    display: flex;
+  .navmenu ul {
     flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
 
   .navmenu ul li {
-    width: 100%;
+    margin: 0;
     text-align: center;
+    position: relative;
   }
 
   .navmenu ul li a {
-    padding: 15px;
     display: block;
+    padding: 12px 20px;
     color: #333;
-    text-transform: uppercase;
     font-weight: 500;
     transition: 0.3s;
   }
 
-  .navmenu ul li a:hover {
-    background-color: rgba(0, 123, 255, 0.1);
+  .navmenu ul ul {
+    display: none;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .navmenu ul li:hover > ul {
+    display: none;
+  }
+
+  .navmenu.show {
+    transform: translateY(0%);
   }
 
   .header-toggle {
@@ -252,10 +431,6 @@ p {
     font-size: 1.5rem;
     cursor: pointer;
     color: #333;
-    z-index: 1000;
-  }
-
-  .navmenu.show ul {
-    display: flex;
+    z-index: 9999;
   }
 }

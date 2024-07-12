@@ -92,6 +92,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.querySelector('.header-toggle');
+      const navMenu = document.querySelector('.navmenu');
+
+      toggleButton.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+      });
+    });
+  </script>
 
 </body>
 

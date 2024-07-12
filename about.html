@@ -173,6 +173,13 @@
     toggleButton.addEventListener('click', function () {
       navMenu.classList.toggle('show');
     });
+
+    // Optional: Close the menu if clicking outside of it
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+        navMenu.classList.remove('show');
+      }
+    });
   });
 </script>
 </body>

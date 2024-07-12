@@ -364,9 +364,43 @@ p {
 }
 
 @media (max-width: 768px) {
-  .navmenu {
-    display: none;
+  .navmenu ul li {
+    position: relative;
   }
+
+  .navmenu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown */
+    z-index: 999;
+    width: 200px; /* Adjust width as needed */
+  }
+
+  .navmenu ul li:hover > ul {
+    display: block;
+  }
+
+  .navmenu ul ul li {
+    width: 100%;
+    white-space: nowrap; /* Prevent line breaks */
+  }
+
+  .navmenu ul ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333; /* Dropdown link color */
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .navmenu ul ul li a:hover {
+    background-color: #007bff; /* Dropdown hover background color */
+    color: #fff; /* Dropdown hover text color */
+  }
+}
 
   .header-toggle {
     display: block;

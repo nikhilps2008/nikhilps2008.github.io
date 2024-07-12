@@ -401,19 +401,60 @@ p {
   }
 }
 
+.header-toggle {
+  display: none; /* Initially hide the toggle button */
+}
+
 @media (max-width: 768px) {
+  .navmenu {
+    position: relative; /* Ensure relative positioning for absolute positioning of dropdown */
+  }
+
   .header-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 1000; /* Ensure the toggle button is above other elements */
+  }
+
+  .navmenu ul {
+    display: none; /* Hide the main menu items initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown */
+    z-index: 999;
+    width: 100%; /* Full width dropdown */
+  }
+
+  .navmenu ul li {
+    width: 100%;
+    text-align: center; /* Center align menu items */
+  }
+
+  .navmenu ul li a {
+    display: block;
+    padding: 10px 0; /* Adjust padding as needed */
+    color: #333; /* Dropdown link color */
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .navmenu ul li a:hover {
+    background-color: #007bff; /* Dropdown hover background color */
+    color: #fff; /* Dropdown hover text color */
+  }
+
+  /* Show menu when toggle button is clicked */
+  .navmenu.active ul {
     display: block;
   }
 }
-
-@media (max-width: 576px) {
-  .hero p {
-    font-size: 1.2rem;
-  }
-}
-
-
 /* Additional Customizations */
 
 /* Back to Projects Button */

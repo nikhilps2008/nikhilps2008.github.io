@@ -362,8 +362,7 @@ p {
 .php-email-form .btn:hover {
   background-color: #004190;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navmenu ul li {
     position: relative;
   }
@@ -402,29 +401,9 @@ p {
   }
 }
 
+@media (max-width: 768px) {
   .header-toggle {
     display: block;
-  }
-
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-text {
-    margin-left: 0;
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  .portfolio-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid layout */
-    gap: 10px;
   }
 }
 
@@ -433,6 +412,7 @@ p {
     font-size: 1.2rem;
   }
 }
+
 
 /* Additional Customizations */
 

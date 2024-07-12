@@ -362,6 +362,7 @@ p {
 .php-email-form .btn:hover {
   background-color: #004190;
 }
+
 @media (max-width: 1024px) {
   .navmenu ul li {
     position: relative;
@@ -455,6 +456,7 @@ p {
     display: block;
   }
 }
+
 /* Additional Customizations */
 
 /* Back to Projects Button */

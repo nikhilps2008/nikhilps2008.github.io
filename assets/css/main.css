@@ -363,47 +363,40 @@ p {
   background-color: #004190;
 }
 
-/* Media Queries for Responsive Design */
-
-@media (max-width: 992px) {
-  .section-title h2 {
-    font-size: 2rem; /* Decrease heading size on medium screens */
-  }
-}
-
+/* Media query for responsiveness */
 @media (max-width: 768px) {
-  .navmenu {
-    display: none;
-  }
+    .navbar ul {
+        display: none; /* Hide the main nav items */
+        position: absolute;
+        top: 100%; /* Position dropdown below the header */
+        left: 0;
+        width: 100%; /* Full width dropdown */
+        background-color: #fff; /* Background color */
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* Optional: Box shadow for dropdown */
+        z-index: 999; /* Ensure dropdown appears above other content */
+    }
 
-  .header-toggle {
-    display: block;
-  }
+    .navbar li {
+        position: relative;
+        width: 100%; /* Full width for list items */
+    }
 
-  .hero h2 {
-    font-size: 2.5rem;
-  }
+    .navbar li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
 
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .navbar ul li {
+        display: block; /* Make list items stack vertically */
+    }
 
-  .about-text {
-    margin-left: 0;
-    margin-top: 30px;
-    text-align: center;
-  }
+    .navbar ul li a {
+        padding: 12px 16px; /* Padding for dropdown links */
+        color: #333; /* Link color */
+        text-decoration: none;
+        display: block;
+    }
 
-  .portfolio-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid layout */
-    gap: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero p {
-    font-size: 1.2rem;
-  }
+    .navbar ul li a:hover {
+        background-color: #f1f1f1; /* Background color on hover */
+    }
 }

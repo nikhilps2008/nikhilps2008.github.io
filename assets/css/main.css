@@ -62,7 +62,7 @@ p {
   height: 100px; /* Adjusted header height */
   z-index: 9999;
   background: rgba(255, 255, 255, 0.9);
-  transition: all 1s;
+  transition: all 0.3s;
 }
 
 #header .header-toggle {
@@ -363,117 +363,47 @@ p {
   background-color: #004190;
 }
 
-@media (max-width: 1024px) {
-  .navmenu ul li {
-    position: relative;
-  }
+/* Media Queries for Responsive Design */
 
-  .navmenu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* Adjust background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown */
-    z-index: 999;
-    width: 200px; /* Adjust width as needed */
+@media (max-width: 992px) {
+  .section-title h2 {
+    font-size: 2rem; /* Decrease heading size on medium screens */
   }
-
-  .navmenu ul li:hover > ul {
-    display: block;
-  }
-
-  .navmenu ul ul li {
-    width: 100%;
-    white-space: nowrap; /* Prevent line breaks */
-  }
-
-  .navmenu ul ul li a {
-    display: block;
-    padding: 10px 15px;
-    color: #333; /* Dropdown link color */
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  .navmenu ul ul li a:hover {
-    background-color: #007bff; /* Dropdown hover background color */
-    color: #fff; /* Dropdown hover text color */
-  }
-}
-
-.header-toggle {
-  display: none; /* Initially hide the toggle button */
 }
 
 @media (max-width: 768px) {
   .navmenu {
-    position: relative; /* Ensure relative positioning for absolute positioning of dropdown */
+    display: none;
   }
 
   .header-toggle {
     display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-    z-index: 1000; /* Ensure the toggle button is above other elements */
   }
 
-  .navmenu ul {
-    display: none; /* Hide the main menu items initially */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* Adjust background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown */
-    z-index: 999;
-    width: 100%; /* Full width dropdown */
+  .hero h2 {
+    font-size: 2.5rem;
   }
 
-  .navmenu ul li {
-    width: 100%;
-    text-align: center; /* Center align menu items */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .navmenu ul li a {
-    display: block;
-    padding: 10px 0; /* Adjust padding as needed */
-    color: #333; /* Dropdown link color */
-    text-decoration: none;
-    transition: 0.3s;
+  .about-text {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
   }
 
-  .navmenu ul li a:hover {
-    background-color: #007bff; /* Dropdown hover background color */
-    color: #fff; /* Dropdown hover text color */
-  }
-
-  /* Show menu when toggle button is clicked */
-  .navmenu.active ul {
-    display: block;
+  .portfolio-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid layout */
+    gap: 10px;
   }
 }
 
-/* Additional Customizations */
-
-/* Back to Projects Button */
-.back-to-projects {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #fff; /* White background */
-  color: #007bff; /* Blue font color */
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.back-to-projects:hover {
-  background-color: #007bff; /* Blue background on hover */
-  color: #fff; /* White font color on hover */
+@media (max-width: 576px) {
+  .hero p {
+    font-size: 1.2rem;
+  }
 }

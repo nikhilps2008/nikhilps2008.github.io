@@ -1,88 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Projects - Nikhil's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SQL and Tableau Projects - Nikhil's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
     <style>
-        /* Additional inline CSS for specific page styles */
-        .project-box {
-            display: inline-block;
-            width: 300px;
-            padding: 20px;
-            margin: 20px;
+        /* Additional Custom Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #fff; /* Updated body font color to white */
+            background-color: #03264d; /* Updated background color to navy blue */
+            overflow-x: hidden;
+            padding-bottom: 80px; /* Prevents content from being overlapped by fixed header */
+        }
+
+        a {
+            color: #fff; /* Updated link color to white */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3; /* Updated link hover color */
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8rem;
+            color: #fff;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
             text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .section-title p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .project-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px; /* Added padding around the project grid */
+        }
+
+        .project-box {
+            flex: 0 1 calc(30% - 20px); /* Adjusted width to fit three boxes in a row with spacing */
+            text-align: center;
+            background-color: #fff; /* Updated box background color to white */
+            padding: 20px; /* Added padding for better spacing */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+            transition: transform 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .project-box:hover {
+            transform: translateY(-10px); /* Lift on hover effect */
         }
 
         .project-box img {
             max-width: 100%;
             height: auto;
-            margin-bottom: 10px;
+            border-radius: 8px; /* Added border radius for images */
         }
 
         .project-box h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            font-weight: bold; /* Bold font for project name */
+            font-size: 1.2rem; /* Adjusted heading size */
+            margin-top: 10px; /* Adjusted margin */
+            color: #03264d; /* Text color matches link color */
         }
 
         .project-box a {
             display: block;
-            margin-top: 15px;
-            color: #4c604c;
-            text-decoration: none;
-            font-weight: bold;
+            margin-top: 10px; /* Adjusted margin */
+            color: #0056b3; /* Link color */
         }
 
         .project-box a:hover {
             text-decoration: underline;
         }
+
+        .main-content {
+            margin-top: 100px; /* Added margin to push content below the header */
+            padding-bottom: 20px; /* Added padding at the bottom */
+            text-align: center; /* Center align content */
+        }
+
+        #welcome-text {
+            color: #fff; /* Set color of the heading to white */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            color: #fff; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            font-size: 1rem;
+            display: inline-block;
+            margin-bottom: 20px; /* Space between button and heading */
+        }
+
+        .back-button:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .back-arrow {
+            vertical-align: middle; /* Align arrow vertically */
+            margin-right: 5px; /* Space between arrow and text */
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-title">
-                <h1>Nikhil's<br> Portfolio</h1>
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="certifications.html">Certifications</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <main class="main-content">
-            <div class="project-grid">
-                <div class="project-box">
-                    <img src="https://github.com/nikhilps2008/Examining-the-Relationship-Between-Crime-and-Rental-Affordability-Toronto/raw/main/Reports/Final%20Project%20Dashboard%20-%20Tableau.png" alt="Crime and Rental Affordability in Toronto">
-                    <h2>Crime and Rental Affordability in Toronto</h2>
-                    <a href="https://github.com/nikhilps2008/Examining-the-Relationship-Between-Crime-and-Rental-Affordability-Toronto">GitHub Link</a>
-                    <a href="https://github.com/nikhilps2008/Examining-the-Relationship-Between-Crime-and-Rental-Affordability-Toronto/blob/main/Reports/Final%20Project%20Dashboard%20-%20Tableau.png">Dashboard Link</a>
-                </div>
-            </div>
-        </main>
+    <!-- Header -->
+    <header id="header" class="header d-flex flex-column justify-content-center">
 
-        <footer class="footer">
-            <div class="social-links">
-                <a href="https://github.com/nikhilps2008" target="_blank" rel="noopener noreferrer">
-                    <img src="images/GitHub.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/nikhil-s-6426474a/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/LinkedIn.png" alt="LinkedIn">
-                </a>
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+                <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+                <li><a href="projects.html" class="active"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
+                <li><a href="certifications.html"><i class="bi bi-images navicon"></i><span>Certifications</span></a></li>
+                <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- End Header -->
+
+    <main class="main-content">
+        <a href="projects.html" class="back-button"><i class="bi bi-arrow-left back-arrow"></i> Back to Projects</a>
+        <h2 id="welcome-text">SQL and Tableau Projects</h2>
+        <div class="project-grid">
+            <div class="project-box">
+                <img src="https://github.com/nikhilps2008/Examining-the-Relationship-Between-Crime-and-Rental-Affordability-Toronto/raw/main/Reports/Final%20Project%20Dashboard%20-%20Tableau.png" alt="Crime and Rental Affordability in Toronto">
+                <h2>Crime and Rental Affordability in Toronto</h2>
+                <a href="https://github.com/nikhilps2008/Examining-the-Relationship-Between-Crime-and-Rental-Affordability-Toronto">GitHub Link</a>
+                <a href="https://github.com/nikhilps2008/Examining-the-Relationship-Between-Crime-and-Rental-Affordability-Toronto/blob/main/Reports/Final%20Project%20Dashboard%20-%20Tableau.png">Dashboard Link</a>
             </div>
-            <p>&copy; 2024 Nikhil's Portfolio. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </main>
+
 </body>
+
 </html>

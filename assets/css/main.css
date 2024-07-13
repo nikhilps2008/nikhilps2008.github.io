@@ -55,7 +55,7 @@ p {
 
 /* Header */
 #header {
-  position: fixed;
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -68,10 +68,10 @@ p {
 }
 
 #header .header-toggle {
-  display: none;
   position:absolute;
-  top: 15px;
-  right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
   font-size: 1.5rem;
   cursor: pointer;
   color: #333;

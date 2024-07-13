@@ -63,23 +63,30 @@ p {
   z-index: 9999;
   background: rgba(255, 255, 255, 0.9);
   transition: all 0.3s;
+  justify-content: center;
+  align-items: center;
 }
 
 #header .header-toggle {
   display: none;
-  position: absolute;
+  position:absolute;
   top: 15px;
   right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
   color: #333;
+  align-items: center;
 }
 
-.navmenu {
+#header.navmenu {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  list-style-type: none ;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .navmenu ul {

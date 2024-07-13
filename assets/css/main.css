@@ -458,3 +458,5 @@ p {
     background-color: #f1f1f1; /* Background color on hover */
   }
 }
+.col-lg-6 {font-size: large;
+font-weight: bold;}

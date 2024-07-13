@@ -235,3 +235,22 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+// JavaScript to toggle mobile navigation menu
+document.addEventListener('DOMContentLoaded', function() {
+  const headerToggle = document.querySelector('.header-toggle');
+  const navMenu = document.querySelector('.navmenu ul');
+
+  // Toggle the active class on click
+  headerToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+
+  // Close the menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const target = event.target;
+    if (!target.closest('.navmenu') && !target.closest('.header-toggle')) {
+      navMenu.classList.remove('active');
+    }
+  });
+});
+

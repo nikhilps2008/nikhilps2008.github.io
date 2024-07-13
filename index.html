@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home - MyResume Bootstrap Template</title>
+  <title>Page Title</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -24,9 +23,65 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-</head>
 
-<body class="index-page">
+  <style>
+    /* Additional Custom Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      color: #fff;
+      background-color: #03264d; /* Navy blue background */
+      overflow-x: hidden;
+      padding-top: 80px; /* Ensure content is below fixed header */
+    }
+
+    /* Header Styles */
+    .header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .navmenu {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navmenu li {
+      margin-right: 20px;
+    }
+
+    .navmenu li:last-child {
+      margin-right: 0;
+    }
+
+    .navmenu a {
+      color: #03264d;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .navmenu a:hover {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
 
   <!-- Header -->
   <header id="header" class="header">
@@ -36,7 +91,7 @@
         <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
-        <li><a href="certifications.html"><i class="bi bi-images navicon"></i><span>Certifications</span></a></li>
+        <li><a href="certifications.html"><i class="bi bi-award navicon"></i><span>Certifications</span></a></li>
         <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
@@ -85,7 +140,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
   <!-- JavaScript to toggle navmenu -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -98,5 +152,4 @@
     });
   </script>
 </body>
-
 </html>

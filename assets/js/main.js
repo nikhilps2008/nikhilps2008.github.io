@@ -253,4 +253,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const headerToggle = document.querySelector('.header-toggle');
+  const navMenu = document.querySelector('.navmenu');
 
+  headerToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const headerToggle = document.querySelector('.header-toggle');
+  const navMenu = document.querySelector('.navmenu');
+
+  headerToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+});

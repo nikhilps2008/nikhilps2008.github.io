@@ -23,7 +23,7 @@
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       color: #fff; /* Updated body font color to white */
-      background-color: #03264d; /* Updated background color to navy blue */
+      background: linear-gradient(to right, #15262c, #1b352b); /* Gray to pastel green gradient */
       overflow-x: hidden;
       padding-top: 30px; /* Ensure content is below fixed header */
       padding-bottom: 80px; /* Prevents content from being overlapped by fixed footer */
@@ -64,7 +64,7 @@
   p {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-    line-height: 1.8rem;
+    line-height: 1.4rem;
     color: #fff;
   }
 
@@ -86,7 +86,7 @@
 
   .section-title p {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #fff;
   }
 
@@ -98,10 +98,9 @@
 
   .skills-list li, .awards-list li {
     margin-bottom: 10px;
-    font-weight: bold; /* Make the text bold */
+    font-weight: normal; /* Make the text bold */
     font-size: 1.2rem; /* Increase font size */
   }
-
   .skills-content {
     display: flex;
     flex-wrap: wrap;
@@ -122,21 +121,21 @@
 
   <!-- Header -->
   <header id="header" class="header d-flex flex-column justify-content-center fixed-top" style="background: rgb(255, 255, 255);">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-          <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-          <li><a href="skills.html"><i class="bi bi-award navicon"></i><span>Skills</span></a></li>
-          <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
-          <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-        </ul>
-      </nav>
-    </header>
-    
-
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="skills.html"><i class="bi bi-award navicon"></i><span>Skills</span></a></li>
+        <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
   </header>
-  <!-- End Header -->
+  
+
+</header>
+<!-- End Header -->
 
   <main class="main" style="padding-top: 10px;">
 
@@ -168,12 +167,13 @@
           </ul>
         </div>
       </div>
-    </div>
+      <p>
 
     <div class="container section-title" data-aos="fade-up">
       <h2>Awards</h2><!-- End Awards Section Title -->
+    <p>
       <ul class="awards-list">
-        <li><a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721848899439/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Earned a prestigious spot on the President's Honour List, recognizing exceptional academic achievement and dedication</a></li>
+        <li><a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721848899439/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Earned a prestigious spot on the President's Honour List</a></li>
         <li><a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721850784837/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Won prizes in software competitions at provincial level</a></li>
         <li>Won multiple Employee of the Month awards</li>
       </ul>

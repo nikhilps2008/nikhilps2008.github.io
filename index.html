@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Nikhil's Portfolio</title>
+  <title>Page Title</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,41 +36,90 @@
     }
 
     /* Header Styles */
-.header {
-background: rgba(255, 255, 255, 0.9);
-padding: 15px 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 1000;
-transition: all 0.3s ease;
-}
-.hero p strong {
-font-weight: 700; /* Make the text bold */
-}
-</style>
+    .header {
+      background: rgb(157, 208, 181);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 15, 15, 0.498); /* White transparent overlay */
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .typed {
+      color: #ffc107; /* Example color */
+    }
+
+    .social-links a {
+      color: #ffc107; /* Example color */
+      margin: 0 10px;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+    
+    .hero p strong {
+      font-weight: 700; /* Make the text bold */
+    }
+
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header id="header" class="header">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-          <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-          <li><a href="skills.html"><i class="bi bi-award navicon"></i><span>Skills</span></a></li>
-          <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
-          <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-        </ul>
-      </nav>
-    </header>
-    
-
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="skills.html"><i class="bi bi-award navicon"></i><span>Skills</span></a></li>
+        <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
   </header>
   <!-- End Header -->
 
@@ -79,7 +128,11 @@ font-weight: 700; /* Make the text bold */
 
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
-      <img src="assets/img/background.png" alt="Background Image">
+      <video autoplay muted loop>
+        <source src="assets/img/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay"></div> <!-- Transparent overlay -->
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
           <div class="col-lg-9 text-center">

@@ -19,130 +19,142 @@
 
   <style>
     /* Additional Custom Styles */
-    body {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 16px; /* Consistent font size for body */
-      color: #fff;
-      background: linear-gradient(to right, #15262c, #1b352b);
-      overflow-x: hidden;
-      padding-top: 30px; /* Ensure content is below fixed header */
-      padding-bottom: 80px; /* Prevents content from being overlapped by fixed footer */
-    }
+    /* Body and main layout adjustments */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px; /* Consistent font size for body */
+  color: #fff;
+  background: linear-gradient(to right, #15262c, #1b352b);
+  overflow-x: hidden;
+  padding-top: 80px; /* Adjusted for fixed header */
+  padding-bottom: 80px; /* Adjusted for fixed footer */
+}
 
-    .header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000; /* Ensure the header is above other content */
-      height: 80px; /* Define header height */
-    }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is above other content */
+  height: 80px; /* Define header height */
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visibility */
+}
 
-    main {
-      margin-top: 80px; /* Adjust this value to be equal to or greater than the header height */
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
+.header .navmenu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    a {
-      color: #ffffff;
-      text-decoration: none;
-    }
+.header .navmenu ul li {
+  margin: 0 15px;
+}
 
-    a:hover {
-      color: #1a3756;
-      text-decoration: underline;
-    }
+.header .navmenu ul li a {
+  color: #333;
+  text-decoration: none;
+}
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: #fff;
-    }
+.header .navmenu ul li a:hover {
+  color: #007bff;
+}
 
-    p {
-      font-family: 'Raleway', sans-serif;
-      font-size: 1rem; /* Consistent font size for paragraphs */
-      line-height: 1.4rem;
-      color: #fff;
-    }
+/* Main content styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
 
-    ul {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 1rem; /* Consistent font size for list items */
-      line-height: 1.4rem;
-      color: #fff;
-    }
+.resume-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-    .section {
-      padding: 20px 0;
-    }
+.resume-left, .resume-right {
+  flex: 1;
+  padding: 20px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 5px; /* Reduced margin */
-    }
+.resume-left {
+  border-right: 2px solid #ffffff;
+}
 
-    .section-title h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #fff;
-    }
+.resume-right {
+  padding-left: 20px;
+}
 
-    .section-title p {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #fff;
-    }
+/* Section styling */
+.section {
+  margin-bottom: 30px;
+}
 
-    .resume-container {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
-    .resume-left, .resume-right {
-      width: 50%;
-      padding: 0px;
-    }
+.section-title h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
 
-    .resume-left {
-      border-right: 2px solid #ffffff;
-    }
+.section-title p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
 
-    .resume-right {
-      padding-left: 20px; /* Reduced padding to minimize gap */
-    }
+.skills-list, .awards-list {
+  list-style: none;
+  padding-left: 0;
+  color: #ffffff;
+}
 
-    .skills-list, .awards-list {
-      list-style: none;
-      padding-left: 0;
-      color: #ffffff;
-    }
+.skills-list li, .awards-list li {
+  margin-bottom: 0.5rem;
+}
 
-    .skills-list li, .awards-list li {
-      margin-bottom: 0.5rem; /* Reduced margin */
-    }
+.education li {
+  margin-bottom: 0.5rem;
+}
 
-    .education {
-      margin-top: 0; /* Reduced margin to decrease gap */
-    }
-    .btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+/* Button styling */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .resume-container {
+    flex-direction: column;
   }
 
-  .btn-primary:hover {
-    background-color: #0056b3;
+  .resume-left, .resume-right {
+    border-right: none;
+    padding-left: 0;
   }
+}
   </style>
 </head>
 
@@ -174,7 +186,7 @@
             <h2>Experience</h2>
             <p>
               <strong>Freelancer, Toronto, Canada (12/2023-Present)</strong> </p>
-              <ul style="text-align: left; text-align: justify; font-size: 90%;">
+              <ul style="text-align: left; text-align: justify; font-size:90%">
                 <li>Utilized SQL, Power BI, Tableau, and Excel to convert complex datasets into actionable insights, resulting in a 25% improvement in data-driven decision-making speed.</li>
                 <li>Achieved a 15% increase in manufacturing efficiency by implementing targeted process improvements and advanced data analysis techniques.</li>
                 <li>Reduced manual data processing time by 30% by developing and deploying automated reporting solutions using Power BI, Tableau, and Python.</li>
@@ -205,9 +217,9 @@
         <section id="awards" class="section">
           <div class="container section-title" data-aos="fade-up">
             <h2>Awards</h2>
-            <ul style="text-align: center;">
-              <a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721848899439/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Earned a prestigious spot on the President's Honour List</a><br>
-              <a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721850784837/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Won prizes in software competitions at provincial level</a><br>
+            <ul style="text-align: center;color: #fff;">
+              <a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721848899439/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank" style="text-align: center;color: #fff;">Earned a prestigious spot on the President's Honour List</a><br>
+              <a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721850784837/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank" style="text-align: center;color: #fff;">Won prizes in software competitions at provincial level</a><br>
               <a>Won multiple Employee of the Month awards</a>
             </ul>
           </div>

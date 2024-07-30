@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Nikhil's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
       background: linear-gradient(to right, #15262c, #1b352b); /* Gray to pastel green gradient */
       overflow-x: hidden;
       padding-top: 30px; /* Ensure content is below fixed header */
-      padding-bottom: 80px; /* Prevents content from being overlapped by fixed footer */
+      padding-bottom: 10px; /* Prevents content from being overlapped by fixed footer */
     }
 
     a {
@@ -54,12 +54,12 @@
 
     /* Sections */
     .section {
-      padding: 120px 0;
+      padding: 80px 0;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: auto; /* Adjusted margin-bottom */
     }
 
     .section-title h2 {
@@ -69,41 +69,50 @@
     }
 
     .section-title p {
-      margin-top: 100px;
+      margin-top: 10px;
       font-size: 1.2rem;
       color: #fff;
     }
 
-    .logo-grid {
+    .project-grid {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      gap: 20px; /* Adjust space between grid items */
+      justify-content: center;
+      margin-top: auto; /* Adjusted margin-top */
     }
 
-    .logo-box {
-      width: 200px;
-      margin: 20px;
-      text-align: center;
-      background-color: #fff; /* Updated box background color to white */
-      padding: 20px; /* Added padding for better spacing */
+    .project-box {
+      width: calc(33.333% - 20px); /* Three items per row with gap */
+      background-color: #1b352b; /* Updated box background color to white */
+      padding: 40px; /* Added padding for better spacing */
       border-radius: 10px; /* Rounded corners */
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+      box-shadow: 0px 4px 8px rgba(52, 67, 57, 0.208); /* Added box shadow for depth */
       transition: transform 0.3s ease; /* Smooth transition on hover */
+      text-align: center;
     }
 
-    .logo-box:hover {
+    .project-box:hover {
       transform: translateY(-10px); /* Lift on hover effect */
     }
 
-    .logo-box img {
-      width: 100px;
-      height: auto;
+    .project-box img {
+      width: 80%;
+      height: 40%;
+      border-radius: 10px; /* Rounded corners for images */
     }
 
-    .logo-box p {
-      font-size: 1rem;
-      margin-top: 10px; /* Adjusted margin */
-      color: #03264d; /* Text color matches link color */
+    .project-box h2 {
+      margin-top: 15px;
+      font-size: 1.4em;
+      color: #ffffff; /* Text color matches link color */
+    }
+
+    .tech-stack {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ffffff; /* Text color matches link color */
     }
   </style>
 </head>
@@ -112,90 +121,86 @@
 
   <!-- Header -->
   <header id="header" class="header d-flex flex-column justify-content-center">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-          <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-          <li><a href="skills.html"><i class="bi bi-award navicon"></i><span>Skills</span></a></li>
-          <li><a href="projects.html"><i class="bi bi-file-earmark-text navicon"></i><span>Projects</span></a></li>
-          <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-        </ul>
-      </nav>
-    </header>
-    
-
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="projects.html"><i class="bi bi-bar-chart-line-fill navicon"></i><span>Projects</span></a></li>
+        <li><a href="resume.html"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
   </header>
   <!-- End Header -->
 
-  <main class="main">
-
-    <!-- Projects Section -->
-<section id="projects" class="projects section">
-
-<div class="container section-title">
-  <h2>Projects</h2>
-</div><!-- End Projects Section Title -->
-
-      <div class="container main-content">
-        <div class="logo-grid">
-          <div class="logo-box">
-            <a href="excel.html">
-              <img src="assets/img/Excel.png" alt="Excel Logo">
-              <p>Projects using Microsoft Excel</p>
-            </a>
-          </div>
-          <div class="logo-box">
-            <a href="powerbi.html">
-              <img src="assets/img/PowerBI.png" alt="Power BI Logo">
-              <p>Projects using Microsoft Power BI</p>
-            </a>
-          </div>
-          <div class="logo-box">
-            <a href="analytics.html">
-              <img src="assets/img/Data Analytics.png" alt="Data Analytics Logo">
-              <p>Projects using Multiple Tools</p>
-            </a>
-          </div>
+  <!-- Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container section-title">
+      <h2>Projects</h2>
+    </div><!-- End Projects Section Title -->
+    
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-box">
+          <a href="https://github.com/nikhilps2008/Crime_Rental_Affordability_Motor_Vehicle_Collisions_Study_Toronto/tree/main">
+            <img src="assets/img/Rent-Crime-Collision-Dashboard-2.png" alt="Crime-Collision-Rent-Study-Toronto">
+          </a>
+          <h2>Crime, Collision, Rent-Study-Toronto</h2>
+          <p class="tech-stack">Tech Stack: MySQL, Tableau, Markdown, Git</p>
+        </div>
+        <div class="project-box">
+          <a href="https://github.com/nikhilps2008/Heart-Attack-Prediction-Study" target="_blank">
+            <img src="assets/img/Heart Attack Prediction Study.png" alt="Heart Attack Prediction Study">
+          </a>
+          <h2>Heart Attack Prediction Study</h2>
+          <p class="tech-stack">Tech Stack: Power BI, Power Query Editor, Markdown, Git</p>
+        </div>
+        <div class="project-box">
+          <a href="https://github.com/nikhilps2008/Automated-Sales-Analysis-Using-Power-BI-and-Power-Query">
+            <img src="assets/img/Sales Analysis Report.png" alt="Automated Sales Analysis">
+          </a>
+          <h2>Automated Sales Analysis</h2>
+          <p class="tech-stack">Tech Stack: Power BI, Power Query Editor, Markdown, Git</p>
+        </div>
+        <div class="project-box">
+          <a href="https://github.com/nikhilps2008/Data-Professional-Survey-Breakdown" target="_blank">
+            <img src="assets/img/Data Professional Survey Report.png" alt="Data Professional Survey Breakdown">
+          </a>
+          <h2>Data Professional Survey Breakdown</h2>
+          <p class="tech-stack">Tech Stack: Power BI, Power Query Editor, Markdown, Git</p>
+        </div>
+        <div class="project-box">
+          <a href="https://github.com/nikhilps2008/Interactive-Sales-Analysis">
+            <img src="assets/img/Interacive Sales Analysis-2.png" alt="Interactive Sales Analysis">
+          </a>
+          <h2>Interactive Sales Analysis</h2>
+          <p class="tech-stack">Tech Stack: Excel, Power Query Editor, Markdown, Git</p>
+        </div>
+        <div class="project-box">
+          <a href="https://github.com/nikhilps2008/Coffee-Shop-Sales-Analysis">
+            <img src="assets/img/Coffee Shop Sales Analysis.png" alt="Coffee Shop Sales Analysis">
+          </a>
+          <h2>Coffee Shop Sales Analysis</h2>
+          <p class="tech-stack">Tech Stack: Excel, Power Query Editor, Markdown, Git</p>
         </div>
       </div>
-
-    </section>
-    <!-- End Projects Section -->
-
-  </main>
+    </div>
+  </section>
+  <!-- End Projects Section -->
 
   <!-- Scroll Top Button -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
+  <!-- End Scroll Top Button -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- JavaScript to toggle navmenu -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const headerToggle = document.querySelector('.header-toggle');
-      const navMenu = document.querySelector('.navmenu');
-
-      headerToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-      });
-    });
-  </script>
 </body>
+
 </html>

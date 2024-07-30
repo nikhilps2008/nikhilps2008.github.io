@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Nikhil's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Additional Custom Styles */
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 16px; /* Consistent font size for body */
+      color: #fff;
+      background: linear-gradient(to right, #15262c, #1b352b);
+      overflow-x: hidden;
+      padding-top: 30px; /* Ensure content is below fixed header */
+      padding-bottom: 80px; /* Prevents content from being overlapped by fixed footer */
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000; /* Ensure the header is above other content */
+      height: 80px; /* Define header height */
+    }
+
+    main {
+      margin-top: 80px; /* Adjust this value to be equal to or greater than the header height */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1a3756;
+      text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem; /* Consistent font size for paragraphs */
+      line-height: 1.4rem;
+      color: #fff;
+    }
+
+    ul {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem; /* Consistent font size for list items */
+      line-height: 1.4rem;
+      color: #fff;
+    }
+
+    .section {
+      padding: 20px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 5px; /* Reduced margin */
+    }
+
+    .section-title h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .section-title p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .resume-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .resume-left, .resume-right {
+      width: 50%;
+      padding: 0px;
+    }
+
+    .resume-left {
+      border-right: 2px solid #ffffff;
+    }
+
+    .resume-right {
+      padding-left: 20px; /* Reduced padding to minimize gap */
+    }
+
+    .skills-list, .awards-list {
+      list-style: none;
+      padding-left: 0;
+      color: #ffffff;
+    }
+
+    .skills-list li, .awards-list li {
+      margin-bottom: 0.5rem; /* Reduced margin */
+    }
+
+    .education {
+      margin-top: 0; /* Reduced margin to decrease gap */
+    }
+    .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex flex-column justify-content-center fixed-top" style="background: rgb(255, 255, 255);">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="projects.html"><i class="bi bi-bar-chart-line-fill navicon"></i><span>Projects</span></a></li>
+        <li><a href="resume.html"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <div class="resume-container">
+
+      <!-- Left Side: Experience -->
+      <div class="resume-left">
+        <section id="experience" class="section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Experience</h2>
+            <p>
+              <strong>Freelancer, Toronto, Canada (12/2023-Present)</strong> </p>
+              <ul style="text-align: left; text-align: justify; font-size: medium;">
+                <li>Utilized SQL, Power BI, Tableau, and Excel to convert complex datasets into actionable insights, resulting in a 25% improvement in data-driven decision-making speed.</li>
+                <li>Achieved a 15% increase in manufacturing efficiency by implementing targeted process improvements and advanced data analysis techniques.</li>
+                <li>Reduced manual data processing time by 30% by developing and deploying automated reporting solutions using Power BI, Tableau, and Python.</li>
+                <li>Leveraged advanced SQL queries and Python for in-depth marketing performance analysis, leading to a 20% increase in campaign ROI through actionable insights and automated reports.</li>
+              </ul>
+              <p><strong style="font-size: medium;">Martinrea, Newmarket, Canada (04/2017-Present)</strong></p>
+              <ul style="text-align: left; text-align: justify;font-size: medium">
+                <li>Conducted detailed analysis and streamlined manufacturing processes, resulting in a 15% increase in overall efficiency by reducing cycle times and tool wear.</li>
+                <li>Coordinated with design, production, and quality teams to implement new technologies and improve product quality, enhancing overall production efficiency.</li>
+                <li>Utilized statistical tools to identify bottlenecks and implemented solutions that improved machine uptime and reduced production downtime by 20%.</li>
+                <li>Collaborated with suppliers and clients to ensure project alignment with specifications, leading to a 10% reduction in production errors and enhanced customer satisfaction.</li>
+              </ul>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Side: Skills, Awards, and Education -->
+      <div class="resume-right">
+        <section id="skills" class="section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Skills</h2>
+            <p style="text-align: center;"><strong>
+              SQL, Microsoft Power BI, Microsoft Excel, Tableau, Python, ETL (Extract Transform Load), Critical Thinking, Leadership Skills, Math Skills, Probability, Statistics, Management Skills
+            </p></strong>
+          </div>
+        </section>
+        <section id="awards" class="section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Awards</h2>
+            <ul style="text-align: center;"><strong>
+              <a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721848899439/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Earned a prestigious spot on the President's Honour List</a><br>
+              <a href="https://www.linkedin.com/in/nikhil-s-6426474a/details/honors/1721850784837/single-media-viewer/?profileId=ACoAAApq3tIB5efPIeiQbTdgedy7jwRzQF0_-FY" target="_blank">Won prizes in software competitions at provincial level</a><br>
+              <a>Won multiple Employee of the Month awards</a></strong>
+            </ul>
+          </div>
+        </section>
+        <section id="education" class="section education">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Education</h2>
+            <p style="text-align: left;">
+              <li><strong>Diploma in Data Analytics</strong></br></li> Brainstation, Toronto, Canada (Mar 2023-June 2023)
+              <br>
+              <li><strong>Bachelor's in Mechanical Engineering</strong></br></li> Kerala University, Trivandrum, India (July 2008-July 2012)
+            </p>
+          </div>
+        </section>
+        <section id="download-resume" class="section">
+          <div class="container section-title">
+            <h2>Download Resume</h2>
+            <p>
+              <a href="assets/img/Nikhil Sreenivasan-Data-Analyst.pdf" class="btn btn-primary" download>Download My Resume</a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- JavaScript to toggle navmenu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const headerToggle = document.querySelector('.header-toggle');
+      const navMenu = document.querySelector('.navmenu');
+
+      headerToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
